@@ -32,6 +32,8 @@ public class TooManyRequestsException extends AmazonServiceException {
      */
     public TooManyRequestsException(String message) {
         super(message);
+
+        this.setErrorCode("ThrottlingException");
     }
 
     private String retryAfterSeconds;

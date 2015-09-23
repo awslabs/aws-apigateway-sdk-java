@@ -29,6 +29,7 @@ public class TestInvokeMethodRequest {
 
     private java.util.Map<String, String> headers;
 
+    private String clientCertificateId;
 
 
     /**
@@ -235,6 +236,39 @@ public class TestInvokeMethodRequest {
     }
 
 
+    /**
+     * Returns the value of the clientCertificateId property for this object.
+     *
+     * @return The value of the clientCertificateId property for this object.
+     */
+    public String getClientCertificateId() {
+        return clientCertificateId;
+    }
+
+    /**
+     * Sets the value of the clientCertificateId property for this object.
+     *
+     * @param clientCertificateId The new value for the clientCertificateId property for this object.
+     */
+    public void setClientCertificateId(String clientCertificateId) {
+        this.clientCertificateId = clientCertificateId;
+    }
+
+    /**
+     * Sets the value of the clientCertificateId property for this object.
+     *
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param clientCertificateId The new value for the clientCertificateId property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained
+     *         together.
+     */
+    public TestInvokeMethodRequest withClientCertificateId(String clientCertificateId) {
+        this.clientCertificateId = clientCertificateId;
+        return this;
+    }
+
 
 
     @Override
@@ -247,6 +281,7 @@ public class TestInvokeMethodRequest {
         if (getPathWithQueryString() != null) sb.append("pathWithQueryString: " + getPathWithQueryString() + ",");
         if (getBody() != null) sb.append("body: " + getBody() + ",");
         if (getHeaders() != null) sb.append("headers: " + getHeaders() + ",");
+        if (getClientCertificateId() != null) sb.append("clientCertificateId: " + getClientCertificateId() + ",");
         sb.append("}");
         return sb.toString();
     }
@@ -261,6 +296,7 @@ public class TestInvokeMethodRequest {
         hashCode = prime * hashCode + ((getPathWithQueryString() == null) ? 0 : getPathWithQueryString().hashCode());
         hashCode = prime * hashCode + ((getBody() == null) ? 0 : getBody().hashCode());
         hashCode = prime * hashCode + ((getHeaders() == null) ? 0 : getHeaders().hashCode());
+        hashCode = prime * hashCode + ((getClientCertificateId() == null) ? 0 : getClientCertificateId().hashCode());
         return hashCode;
     }
 
@@ -284,7 +320,8 @@ public class TestInvokeMethodRequest {
         if (other.getBody() != null && other.getBody().equals(this.getBody()) == false) return false;
         if (other.getHeaders() == null ^ this.getHeaders() == null) return false;
         if (other.getHeaders() != null && other.getHeaders().equals(this.getHeaders()) == false) return false;
+        if (other.getClientCertificateId() == null ^ this.getClientCertificateId() == null) return false;
+        if (other.getClientCertificateId() != null && other.getClientCertificateId().equals(this.getClientCertificateId()) == false) return false;
         return true;
     }
-
 }

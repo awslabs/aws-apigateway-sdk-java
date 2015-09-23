@@ -22,7 +22,7 @@ public enum IntegrationType {
 
     HTTP("HTTP"),
     AWS("AWS"),
-    Mock("Mock");
+    MOCK("MOCK");
 
     private String value;
 
@@ -48,8 +48,8 @@ public enum IntegrationType {
             return IntegrationType.HTTP;
         } else if ("AWS".equals(value)) {
             return IntegrationType.AWS;
-        } else if ("Mock".equals(value)) {
-            return IntegrationType.Mock;
+        } else if ("MOCK".equals(value)) {
+            return IntegrationType.MOCK;
         } else {
             throw new IllegalArgumentException("Cannot create enum from " + value + " value!");
         }

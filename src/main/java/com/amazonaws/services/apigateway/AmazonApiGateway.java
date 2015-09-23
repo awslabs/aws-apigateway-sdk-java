@@ -78,10 +78,9 @@ public class AmazonApiGateway {
         exceptionClasses.put(404, NotFoundException.class);
         exceptionClasses.put(409, ConflictException.class);
         exceptionClasses.put(429, TooManyRequestsException.class);
-        exceptionClasses.put(429, LimitExceededException.class);
         exceptionClasses.put(503, ServiceUnavailableException.class);
 
-        this.amazonApiGatewayService = new HalService<ApiGateway>(endpoint == null ? DEFAULT_ENDPOINT : endpoint, SERVICE_NAME, regionId, ApiGateway.class, new StatusCodeErrorResponseHandler(exceptionClasses));
+        this.amazonApiGatewayService = new HalService<>(endpoint == null ? DEFAULT_ENDPOINT : endpoint, SERVICE_NAME, regionId, ApiGateway.class, new StatusCodeErrorResponseHandler(exceptionClasses));
     }
 
     //-------------------------------------------------------------

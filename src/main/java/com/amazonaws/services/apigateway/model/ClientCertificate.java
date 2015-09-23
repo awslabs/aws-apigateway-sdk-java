@@ -20,31 +20,20 @@ import com.amazonaws.http.*;
 
 import java.util.*;
 
-public interface Stage extends ResourceInfo {
+public interface ClientCertificate extends ResourceInfo {
 
     /**
      *
      */
-    @Link(relation = "stage:update", method = HttpMethodName.PATCH)
-    Stage updateStage(PatchDocument updateStageInput);
+    @Link(relation = "clientcertificate:update", method = HttpMethodName.PATCH)
+    ClientCertificate updateClientCertificate(PatchDocument updateClientCertificateInput);
 
     /**
      *
      */
-    @Link(relation = "stage:delete", method = HttpMethodName.DELETE)
-    void deleteStage();
+    @Link(relation = "clientcertificate:delete", method = HttpMethodName.DELETE)
+    void deleteClientCertificate();
 
-    /**
-     *
-     */
-    @Link(relation = "stage:flush-cache", method = HttpMethodName.DELETE)
-    void flushStageCache();
-
-
-    /**
-     *
-     */
-    String getDeploymentId();
 
     /**
      *
@@ -54,32 +43,12 @@ public interface Stage extends ResourceInfo {
     /**
      *
      */
-    String getStageName();
-
-    /**
-     *
-     */
     String getDescription();
 
     /**
      *
      */
-    Boolean getCacheClusterEnabled();
-
-    /**
-     *
-     */
-    String getCacheClusterSize();
-
-    /**
-     *
-     */
-    String getCacheClusterStatus();
-
-    /**
-     *
-     */
-    java.util.Map<String, MethodSetting> getMethodSettings();
+    String getPemEncodedCertificate();
 
     /**
      *
@@ -89,6 +58,6 @@ public interface Stage extends ResourceInfo {
     /**
      *
      */
-    java.util.Date getLastUpdatedDate();
+    java.util.Date getExpirationDate();
 
 }

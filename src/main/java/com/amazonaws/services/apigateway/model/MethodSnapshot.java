@@ -17,46 +17,9 @@ package com.amazonaws.services.apigateway.model;
 
 public class MethodSnapshot {
 
-    private String resourceId;
-
     private String authorizationType;
 
     private Boolean apiKeyRequired;
-
-
-
-    /**
-     * Returns the value of the resourceId property for this object.
-     *
-     * @return The value of the resourceId property for this object.
-     */
-    public String getResourceId() {
-        return resourceId;
-    }
-
-    /**
-     * Sets the value of the resourceId property for this object.
-     *
-     * @param resourceId The new value for the resourceId property for this object.
-     */
-    public void setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-    }
-
-    /**
-     * Sets the value of the resourceId property for this object.
-     *
-     * Returns a reference to this object so that method calls can be chained together.
-     *
-     * @param resourceId The new value for the resourceId property for this object.
-     *
-     * @return A reference to this updated object so that method calls can be chained
-     *         together.
-     */
-    public MethodSnapshot withResourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
 
 
     /**
@@ -128,12 +91,10 @@ public class MethodSnapshot {
 
 
 
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
-        if (getResourceId() != null) sb.append("resourceId: " + getResourceId() + ",");
         if (getAuthorizationType() != null) sb.append("authorizationType: " + getAuthorizationType() + ",");
         if (getApiKeyRequired() != null) sb.append("apiKeyRequired: " + getApiKeyRequired() + ",");
         sb.append("}");
@@ -144,7 +105,6 @@ public class MethodSnapshot {
     public int hashCode() {
         final int prime = 31;
         int hashCode = 1;
-        hashCode = prime * hashCode + ((getResourceId() == null) ? 0 : getResourceId().hashCode());
         hashCode = prime * hashCode + ((getAuthorizationType() == null) ? 0 : getAuthorizationType().hashCode());
         hashCode = prime * hashCode + ((getApiKeyRequired() == null) ? 0 : getApiKeyRequired().hashCode());
         return hashCode;
@@ -158,13 +118,10 @@ public class MethodSnapshot {
         if (obj instanceof MethodSnapshot == false) return false;
         MethodSnapshot other = (MethodSnapshot)obj;
 
-        if (other.getResourceId() == null ^ this.getResourceId() == null) return false;
-        if (other.getResourceId() != null && other.getResourceId().equals(this.getResourceId()) == false) return false;
         if (other.getAuthorizationType() == null ^ this.getAuthorizationType() == null) return false;
         if (other.getAuthorizationType() != null && other.getAuthorizationType().equals(this.getAuthorizationType()) == false) return false;
         if (other.getApiKeyRequired() == null ^ this.getApiKeyRequired() == null) return false;
         if (other.getApiKeyRequired() != null && other.getApiKeyRequired().equals(this.getApiKeyRequired()) == false) return false;
         return true;
     }
-
 }

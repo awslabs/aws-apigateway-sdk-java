@@ -23,7 +23,8 @@ public enum CacheClusterStatus {
     CREATE_IN_PROGRESS("CREATE_IN_PROGRESS"),
     AVAILABLE("AVAILABLE"),
     DELETE_IN_PROGRESS("DELETE_IN_PROGRESS"),
-    NOT_AVAILABLE("NOT_AVAILABLE");
+    NOT_AVAILABLE("NOT_AVAILABLE"),
+    FLUSH_IN_PROGRESS("FLUSH_IN_PROGRESS");
 
     private String value;
 
@@ -53,6 +54,8 @@ public enum CacheClusterStatus {
             return CacheClusterStatus.DELETE_IN_PROGRESS;
         } else if ("NOT_AVAILABLE".equals(value)) {
             return CacheClusterStatus.NOT_AVAILABLE;
+        } else if ("FLUSH_IN_PROGRESS".equals(value)) {
+            return CacheClusterStatus.FLUSH_IN_PROGRESS;
         } else {
             throw new IllegalArgumentException("Cannot create enum from " + value + " value!");
         }

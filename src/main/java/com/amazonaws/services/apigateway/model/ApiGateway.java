@@ -57,6 +57,12 @@ public interface ApiGateway extends ResourceInfo {
     /**
      *
      */
+    @Link(relation = "apigateway:client-certificates")
+    ClientCertificates getClientCertificates();
+
+    /**
+     *
+     */
     @Link(relation = "restapi:by-id")
     RestApi getRestApiById(
         @UriVariable(name = "restapi_id") String restApiId);
@@ -98,7 +104,6 @@ public interface ApiGateway extends ResourceInfo {
      */
     @Link(relation = "account:update", method = HttpMethodName.PATCH)
     Account updateAccount(PatchDocument updateAccountInput);
-
 
 
 }
