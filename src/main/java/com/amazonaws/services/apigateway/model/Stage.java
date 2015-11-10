@@ -84,6 +84,11 @@ public interface Stage extends ResourceInfo {
     /**
      *
      */
+    java.util.Map<String, String> getVariables();
+
+    /**
+     *
+     */
     java.util.Date getCreatedDate();
 
     /**

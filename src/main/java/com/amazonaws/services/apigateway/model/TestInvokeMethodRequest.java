@@ -31,6 +31,8 @@ public class TestInvokeMethodRequest {
 
     private String clientCertificateId;
 
+    private java.util.Map<String, String> stageVariables;
+
 
     /**
      * Returns the value of the restApiId property for this object.
@@ -270,6 +272,40 @@ public class TestInvokeMethodRequest {
     }
 
 
+    /**
+     * Returns the value of the stageVariables property for this object.
+     *
+     * @return The value of the stageVariables property for this object.
+     */
+    public java.util.Map<String, String> getStageVariables() {
+        return stageVariables;
+    }
+
+    /**
+     * Sets the value of the stageVariables property for this object.
+     *
+     * @param stageVariables The new value for the stageVariables property for this object.
+     */
+    public void setStageVariables(java.util.Map<String, String> stageVariables) {
+        this.stageVariables = stageVariables;
+    }
+
+    /**
+     * Sets the value of the stageVariables property for this object.
+     *
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param stageVariables The new value for the stageVariables property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained
+     *         together.
+     */
+    public TestInvokeMethodRequest withStageVariables(java.util.Map<String, String> stageVariables) {
+        this.stageVariables = stageVariables;
+        return this;
+    }
+
+
 
     @Override
     public String toString() {
@@ -282,6 +318,7 @@ public class TestInvokeMethodRequest {
         if (getBody() != null) sb.append("body: " + getBody() + ",");
         if (getHeaders() != null) sb.append("headers: " + getHeaders() + ",");
         if (getClientCertificateId() != null) sb.append("clientCertificateId: " + getClientCertificateId() + ",");
+        if (getStageVariables() != null) sb.append("stageVariables: " + getStageVariables() + ",");
         sb.append("}");
         return sb.toString();
     }
@@ -297,6 +334,7 @@ public class TestInvokeMethodRequest {
         hashCode = prime * hashCode + ((getBody() == null) ? 0 : getBody().hashCode());
         hashCode = prime * hashCode + ((getHeaders() == null) ? 0 : getHeaders().hashCode());
         hashCode = prime * hashCode + ((getClientCertificateId() == null) ? 0 : getClientCertificateId().hashCode());
+        hashCode = prime * hashCode + ((getStageVariables() == null) ? 0 : getStageVariables().hashCode());
         return hashCode;
     }
 
@@ -322,6 +360,8 @@ public class TestInvokeMethodRequest {
         if (other.getHeaders() != null && other.getHeaders().equals(this.getHeaders()) == false) return false;
         if (other.getClientCertificateId() == null ^ this.getClientCertificateId() == null) return false;
         if (other.getClientCertificateId() != null && other.getClientCertificateId().equals(this.getClientCertificateId()) == false) return false;
+        if (other.getStageVariables() == null ^ this.getStageVariables() == null) return false;
+        if (other.getStageVariables() != null && other.getStageVariables().equals(this.getStageVariables()) == false) return false;
         return true;
     }
 }
