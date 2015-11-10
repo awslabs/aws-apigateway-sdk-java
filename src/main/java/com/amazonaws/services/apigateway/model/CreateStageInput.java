@@ -27,6 +27,7 @@ public class CreateStageInput {
 
     private String cacheClusterSize;
 
+    private java.util.Map<String, String> variables;
 
 
     /**
@@ -222,6 +223,41 @@ public class CreateStageInput {
         return this;
     }
 
+    /**
+     * Returns the value of the variables property for this object.
+     *
+     * @return The value of the variables property for this object.
+     */
+    public java.util.Map<String, String> getVariables() {
+        return variables;
+    }
+
+    /**
+     * Sets the value of the variables property for this object.
+     *
+     * @param variables The new value for the variables property for this object.
+     */
+    public void setVariables(java.util.Map<String, String> variables) {
+        this.variables = variables;
+    }
+
+    /**
+     * Sets the value of the variables property for this object.
+     *
+     * Returns a reference to this object so that method calls can be chained together.
+     *
+     * @param variables The new value for the variables property for this object.
+     *
+     * @return A reference to this updated object so that method calls can be chained
+     *         together.
+     */
+    public CreateStageInput withVariables(java.util.Map<String, String> variables) {
+        this.variables = variables;
+        return this;
+    }
+
+
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -231,6 +267,7 @@ public class CreateStageInput {
         if (getDescription() != null) sb.append("description: " + getDescription() + ",");
         if (getCacheClusterEnabled() != null) sb.append("cacheClusterEnabled: " + getCacheClusterEnabled() + ",");
         if (getCacheClusterSize() != null) sb.append("cacheClusterSize: " + getCacheClusterSize() + ",");
+        if (getVariables() != null) sb.append("variables: " + getVariables() + ",");
         sb.append("}");
         return sb.toString();
     }
@@ -244,6 +281,7 @@ public class CreateStageInput {
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());
         hashCode = prime * hashCode + ((getCacheClusterEnabled() == null) ? 0 : getCacheClusterEnabled().hashCode());
         hashCode = prime * hashCode + ((getCacheClusterSize() == null) ? 0 : getCacheClusterSize().hashCode());
+        hashCode = prime * hashCode + ((getVariables() == null) ? 0 : getVariables().hashCode());
         return hashCode;
     }
 
@@ -265,6 +303,8 @@ public class CreateStageInput {
         if (other.getCacheClusterEnabled() != null && other.getCacheClusterEnabled().equals(this.getCacheClusterEnabled()) == false) return false;
         if (other.getCacheClusterSize() == null ^ this.getCacheClusterSize() == null) return false;
         if (other.getCacheClusterSize() != null && other.getCacheClusterSize().equals(this.getCacheClusterSize()) == false) return false;
+        if (other.getVariables() == null ^ this.getVariables() == null) return false;
+        if (other.getVariables() != null && other.getVariables().equals(this.getVariables()) == false) return false;
         return true;
     }
 
