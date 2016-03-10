@@ -45,14 +45,14 @@ public interface Resource extends ResourceInfo {
      */
     @Link(relation = "method:by-http-method")
     Method getMethodByHttpMethod(
-        @UriVariable(name = "http_method") String httpMethod);
+        @UriVariable(name = "httpMethod") String httpMethod);
 
     /**
      *
      */
     @Link(relation = "method:put", method = HttpMethodName.PUT)
     Method putMethod(PutMethodInput putMethodInput, 
-        @UriVariable(name = "http_method") String httpMethod);
+        @UriVariable(name = "httpMethod") String httpMethod);
 
     /**
      *
